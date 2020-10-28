@@ -1,0 +1,2 @@
+# errordebug
+scripts with error
