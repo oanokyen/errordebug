@@ -1,39 +1,29 @@
 # A simple ballot without replacement
 # Person A randomly a picks ball
-pera = (input('Pick ball:  '))
-pera=int(pera)
-if pera == 1:
-    print('Sucessful')
-elif pera == 2:
-    print('Sucessful')
-elif pera == 3:
-    print('Sucessful')    
-elif pera == 4:
-    print('Sucessful')
+pera = int(input('Pick ball:  '))
+if pera <= 4:
+    print('Selection Sucessful')
     
 # Person B randomly picks another ball    
-
 perb = int(input('Pick ball:  ')
-if perb==pera:
+while perb==pera:
     print('Error: Already chosen')
+    perb = int(input('Pick ball:  ')       
 else:
-    print('Sucessful')
+    print('Selection Sucessful')
+               
  # Person C randomly picks another ball   
 perc = int(input('Pick ball:  ')
-if perc==pera:
+while perc==pera or perc==perb:
     print('Error: Already chosen')
-elif perc==perb:
-    print('Error: Already chosen')
+    perc = int(input('Pick ball:  ')       
 else:
-    print('Sucessful')
+    print('Selection Sucessful')
 
 # Person D randomly picks last ball    
-perd = float(input('Pick ball:  ')
-if perd==pera:
+perd = int(input('Pick ball:  ')
+while perd==pera or perd==perb or perd==perc:
     print('Error: Already chosen')
-elif perd==perb:
-    print('Error: Already chosen')
-elif perd==perc:
-    print('Error: Already Chosen')
+    perd = int(input('Pick ball:  ')
 else:
-    print('Sucessful')
+    print('Selection Sucessful')
